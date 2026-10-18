@@ -14,22 +14,45 @@
 .footer-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.footer-lockup img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid rgb(255 255 255 / 55%);
+  border-radius: 50%;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-name {
   font-family: "Manrope", sans-serif;
   font-size: 1.16rem;
   font-weight: 700;
   letter-spacing: -0.04em;
+  color: #fff;
+  line-height: 1.15;
 }
 
-.footer-lockup img {
-  width: 42px;
-  height: 42px;
-  border: 2px solid rgb(255 255 255 / 40%);
-  border-radius: 13px;
-}
-
-.footer-lockup b {
+.footer-brand-name b {
   font-weight: 800;
+}
+
+.footer-brand-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.2;
+  margin-top: 1px;
 }
 
 .footer-about > p {
@@ -61,6 +84,10 @@
 .social-links a:hover {
   background: rgb(255 255 255 / 22%);
   transform: translateY(-2px);
+}
+
+.social-links a svg {
+  display: block;
 }
 
 .footer-column {

@@ -17,25 +17,27 @@ const categories = [...new Set(products.map((product) => product.category))].sor
 const filters = ["All", ...categories];
 
 function ProductCard({ product }) {
-  const [imageSrc, setImageSrc] = useState(product.image);
+  const [imageFailed, setImageFailed] = useState(false);
 
   return (
     <article className="product-card">
       <div className="product-image-wrap">
         <img
           className="product-image"
-          src={imageSrc}
+          src={imageFailed ? placeholder : product.image}
           alt={product.title}
           loading="lazy"
-          onError={() => setImageSrc(placeholder)}
+          onError={() => setImageFailed(true)}
         />
+        <span className="product-category-tag">{product.category}</span>
       </div>
       <div className="product-details">
         <h3>{product.title}</h3>
-        <p className="product-description" title={product.description}>
-          {product.description}
-        </p>
-        <p className="product-price">Rs. {product.price.toLocaleString("en-PK")}</p>
+        {product.description && (
+          <p className="product-description" title={product.description}>
+            {product.description}
+          </p>
+        )}
       </div>
     </article>
   );

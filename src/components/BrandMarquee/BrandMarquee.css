@@ -9,6 +9,12 @@
   text-align: center;
 }
 
+.brand-keyword-highlight {
+  font-size: 1.35em;
+  font-weight: 800;
+  display: inline;
+}
+
 .brands-heading .gradient-underline {
   margin-inline: auto;
 }

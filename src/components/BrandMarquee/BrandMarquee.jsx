@@ -37,6 +37,21 @@ function BrandCard({ brand, duplicate }) {
   );
 }
 
+function formatBrandHeading(title) {
+  if (typeof title !== "string") return title;
+  const parts = title.split(/\b(Tyres?|Rims?)\b/gi);
+  return parts.map((part, index) => {
+    if (/^(Tyres?|Rims?)$/i.test(part)) {
+      return (
+        <span key={index} className="brand-keyword-highlight">
+          {part}
+        </span>
+      );
+    }
+    return part;
+  });
+}
+
 export default function BrandMarquee({ brands, title, id }) {
   const middle = Math.ceil(brands.length / 2);
   const firstRow = brands.slice(0, middle);
@@ -48,7 +63,7 @@ export default function BrandMarquee({ brands, title, id }) {
       <div className="section-shell">
         <div className="brands-heading">
           <p className="eyebrow">Reliable names, ready for the road</p>
-          <h2 className="section-heading" id={headingId}>{title}</h2>
+          <h2 className="section-heading" id={headingId}>{formatBrandHeading(title)}</h2>
           <div className="gradient-underline" />
         </div>
       </div>

@@ -69,9 +69,9 @@
 
 .product-image-wrap {
   position: relative;
-  height: 205px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #f4f0f0;
+  background: #111;
 }
 
 .product-image {
@@ -93,7 +93,7 @@
   overflow: hidden;
   margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   text-overflow: ellipsis;
@@ -102,22 +102,28 @@
 
 .product-description {
   overflow: hidden;
-  margin: 7px 0 15px;
+  margin: 6px 0 0;
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.product-price {
-  display: inline-flex;
-  margin: 0;
-  padding: 7px 11px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, #fff0f1, #ffe3e6);
+.product-category-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(4px);
   color: var(--red-primary);
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1020px) {
@@ -143,7 +149,7 @@
   }
 
   .product-image-wrap {
-    height: 175px;
+    height: auto;
   }
 }
 
@@ -158,6 +164,6 @@
   }
 
   .product-image-wrap {
-    height: 220px;
+    height: auto;
   }
 }

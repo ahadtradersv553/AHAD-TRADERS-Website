@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../assets/logo.svg";
 import "./Header.css";
 
 const links = [
@@ -16,8 +15,11 @@ export default function Header() {
     <header className="site-header">
       <div className="header-inner">
         <a className="brand-lockup" href="#home" aria-label="Ahad Traders home">
-          <img className="brand-mark" src={logo} alt="" />
-          <span>Ahad <b>Traders</b></span>
+          <img className="brand-mark" src="/images/Logo.jpeg" alt="Ahad Traders" />
+          <div className="brand-text">
+            <span className="brand-name">Ahad <b>Traders</b></span>
+            <span className="brand-subtitle">Tyres &amp; Alloy Rims</span>
+          </div>
         </a>
         <button
           className={`menu-toggle${menuOpen ? " is-open" : ""}`}
