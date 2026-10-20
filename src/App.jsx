@@ -17,6 +17,7 @@ export default function App() {
         <BrandMarquee brands={rimBrands} title="Rims Brands We Deal In" id="rim-brands" />
         <CallNowBanner />
         <ProductGrid />
+        <CallNowBanner />
       </main>
       <Footer />
     </>
