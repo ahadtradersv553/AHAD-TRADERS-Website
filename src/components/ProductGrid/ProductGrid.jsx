@@ -17,17 +17,18 @@ const categories = [...new Set(products.map((product) => product.category))].sor
 const filters = ["All", ...categories];
 
 function ProductCard({ product }) {
-  const [imageFailed, setImageFailed] = useState(false);
+  const [failedUrl, setFailedUrl] = useState(null);
+  const isFailed = failedUrl === product.image;
 
   return (
     <article className="product-card">
       <div className="product-image-wrap">
         <img
           className="product-image"
-          src={imageFailed ? placeholder : product.image}
+          src={isFailed ? placeholder : product.image}
           alt={product.title}
           loading="lazy"
-          onError={() => setImageFailed(true)}
+          onError={() => setFailedUrl(product.image)}
         />
         <span className="product-category-tag">{product.category}</span>
       </div>

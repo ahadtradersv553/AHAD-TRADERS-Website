@@ -38,7 +38,7 @@
 /* Brand heading */
 .hero-brand {
   margin: 0 0 10px;
-  font-family: 'Oldenburg', serif;
+  font-family: 'Carter One', cursive, sans-serif;
   font-size: clamp(2.4rem, 6.2vw, 4.8rem);
   font-weight: 400;
   color: #111111;
